@@ -21,7 +21,6 @@ spec:
         # 1) İlk container - 8080
         - name: synergychat-crawler-1
           image: bootdotdev/synergychat-crawler:latest
-          # İstersen containerPort belirt (dokümantif), service buna bakmak zorunda değil
           ports:
             - containerPort: 8080
           envFrom:

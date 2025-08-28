@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: synergychat-testcpu
+  name: synergychat-testcpu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: synergychat-testcpu
+  template:
+    metadata:
+      labels:
+        app: synergychat-testcpu
+    spec:
+      containers:
+      - name: synergychat-testcpu
+        image: bootdotdev/synergychat-testcpu:latest
+        resources:
+          limits:
+            cpu: "50m"

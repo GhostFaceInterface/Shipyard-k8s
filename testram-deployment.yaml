@@ -19,9 +19,12 @@ spec:
       containers:
       - name: synergychat-testram
         image: bootdotdev/synergychat-testram:latest
-        envFrom:
-        - configMapRef:
-            name: synergychat-testram-configmap
+        env:
+          - name: MEGABYTES
+            valueFrom:
+              configMapKeyRef:
+                name: synergychat-testram-configmap
+                key: MEGABYTES
         resources:
           limits:
             memory: "256Mi"

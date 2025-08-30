@@ -27,5 +27,7 @@ spec:
                 key: MEGABYTES
         resources:
           limits:
-            memory: "256Mi"
+            memory: "4000Mi"
             cpu: "500m"
+          requests:
+            memory: "4000Mi"
